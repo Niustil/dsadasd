@@ -1,5 +1,6 @@
 # Use manual goals to specify which ogres to defeat.
 
+```
 def createGenerator(spawnType, x, y, spawnAI):
     generator = game.spawnXY("generator", x, y)
     generator.spawnType = spawnType
@@ -21,6 +22,7 @@ spawnMunchkinsGoal = game.addManualGoal("Let 6 munchkins spawn.")
 dontTouchGoal = game.addManualGoal("Don't attack munchkins.")
 defeatScoutsGoal = game.addManualGoal("Defeat 6 scouts.")
 # game properties used to count new and defeated ogres.
+
 game.spawnedMunchkins = 0
 game.defeatedScouts = 0
 ui.track(game, "spawnedMunchkins")
@@ -59,3 +61,4 @@ game.setActionFor("scout", "defeat", onDefeat)
 
 while True:
     checkGoals()
+```
